@@ -5,6 +5,24 @@ standardisation (ETSI GS QKD interfaces), reviewed under Task 5.1. This
 repository is the **MS5.1** deliverable: it points to the selected
 implementations and keeps them organised by category.
 
+## All tools
+
+<!-- TOOLS-TABLE:START -->
+| Tool | Category | Description |
+| --- | --- | --- |
+| [Next Door Key Simulator](https://github.com/CreepPork/next-door-key-simulator) | Emulation |  |
+| [QKDNetSim](https://github.com/QKDNetSim/qkdnetsim) | Emulation |  |
+| [ETSI GS QKD 014 Reference Implementation (cybermerqury)](https://github.com/cybermerqury/etsi-gs-qkd-014-referenceimplementation) | Control Management |  |
+| [qkd_kme_server](https://github.com/thomasarmel/qkd_kme_server) | Control Management |  |
+| [QUBIP etsi-qkd-004](https://github.com/QUBIP/etsi-qkd-004) | Control Management |  |
+| [TeraFlowSDN](https://labs.etsi.org/rep/tfs/controller) | Control Management |  |
+| [TU/e ETSI-QKD014 client](https://github.com/TUe-QTS/ETSI-QKD014-client) | Control Management |  |
+| [qkd-etsi-api-c-wrapper](https://github.com/qursa-uc3m/qkd-etsi-api-c-wrapper) | Hybrid |  |
+<!-- TOOLS-TABLE:END -->
+
+This table is generated automatically from the YAML entries below by
+`scripts/build_catalog.py` — do not edit it by hand.
+
 ## Entry format
 
 Each implementation is one YAML file under a category's `entries/` folder.
@@ -26,9 +44,7 @@ description: "ETSI GS QKD 014 KME server in Rust, serves keys over mutual TLS an
 
 These four fields are the only metadata tracked here. Licence, ETSI spec
 coverage, maturity, scoring and test results live in the accompanying
-landscape-review Excel and are not duplicated here — the Excel is the
-working document, this repository is the stable, citable, public face of
-the task.
+landscape-review Excel and are not duplicated here.
 
 > Link to the landscape-review Excel: _add the internal/shared link here
 > before dissemination._
@@ -43,7 +59,8 @@ the task.
 
 Each folder contains:
 
-- `index.md` — the human-readable list for that category
+- `README.md` — short description of the category
+- `index.md` — the human-readable table for that category (generated)
 - `entries/*.yaml` — one file per implementation, in the format above
 
 The repository-wide index is [`catalog.csv`](./catalog.csv), regenerated from
@@ -51,10 +68,17 @@ the YAML files with `python3 scripts/build_catalog.py`.
 
 ## Adding an entry
 
-See [CONTRIBUTING.md](./CONTRIBUTING.md). In short: copy `TEMPLATE.yaml` into
-the right `entries/` folder, fill in the four fields, open a pull request.
+Copy `TEMPLATE.yaml` into the right `entries/` folder, fill in the four
+fields, open a pull request — see [CONTRIBUTING.md](./CONTRIBUTING.md). Then
+run:
+
+```bash
+python3 scripts/build_catalog.py && git add -A && git commit -m "Update catalog" && git push
+```
+
+This regenerates the table above, each category's `index.md`, and
+`catalog.csv` in one step.
 
 ## Licence
 
-Content in this repository (README, index files, entry metadata) is released
-under [CC BY 4.0](./LICENSE). See [LICENSE](./LICENSE) for the reasoning.
+Content in this repository is released under [CC BY 4.0](./LICENSE).
