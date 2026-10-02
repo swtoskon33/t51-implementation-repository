@@ -1,0 +1,9 @@
+name,link,category
+Next Door Key Simulator,https://github.com/CreepPork/next-door-key-simulator,emulation
+QKDNetSim,https://github.com/QKDNetSim/qkdnetsim,emulation
+ETSI GS QKD 014 Reference Implementation (cybermerqury),https://github.com/cybermerqury/etsi-gs-qkd-014-referenceimplementation,control-management
+qkd_kme_server,https://github.com/thomasarmel/qkd_kme_server,control-management
+QUBIP etsi-qkd-004,https://github.com/QUBIP/etsi-qkd-004,control-management
+TeraFlowSDN,https://labs.etsi.org/rep/tfs/controller,control-management
+TU/e ETSI-QKD014 client,https://github.com/TUe-QTS/ETSI-QKD014-client,control-management
+qkd-etsi-api-c-wrapper,https://github.com/qursa-uc3m/qkd-etsi-api-c-wrapper,hybrid
