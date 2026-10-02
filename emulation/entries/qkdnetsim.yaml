@@ -1,3 +1,4 @@
 name: "QKDNetSim"
 link: "https://github.com/QKDNetSim/qkdnetsim"
 category: "emulation"
+description: "ns-3 module simulating full QKD networks, including key management and ETSI GS QKD 004/014 key delivery."

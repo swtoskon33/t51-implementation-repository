@@ -10,14 +10,14 @@ implementations and keeps them organised by category.
 <!-- TOOLS-TABLE:START -->
 | Tool | Category | Description |
 | --- | --- | --- |
-| [Next Door Key Simulator](https://github.com/CreepPork/next-door-key-simulator) | Emulation |  |
-| [QKDNetSim](https://github.com/QKDNetSim/qkdnetsim) | Emulation |  |
-| [ETSI GS QKD 014 Reference Implementation (cybermerqury)](https://github.com/cybermerqury/etsi-gs-qkd-014-referenceimplementation) | Control Management |  |
-| [qkd_kme_server](https://github.com/thomasarmel/qkd_kme_server) | Control Management |  |
-| [QUBIP etsi-qkd-004](https://github.com/QUBIP/etsi-qkd-004) | Control Management |  |
-| [TeraFlowSDN](https://labs.etsi.org/rep/tfs/controller) | Control Management |  |
-| [TU/e ETSI-QKD014 client](https://github.com/TUe-QTS/ETSI-QKD014-client) | Control Management |  |
-| [qkd-etsi-api-c-wrapper](https://github.com/qursa-uc3m/qkd-etsi-api-c-wrapper) | Hybrid |  |
+| [Next Door Key Simulator](https://github.com/CreepPork/next-door-key-simulator) | Emulation | Lightweight ETSI 014 KME simulator with two KMEs over mutual TLS, for quick client testing. |
+| [QKDNetSim](https://github.com/QKDNetSim/qkdnetsim) | Emulation | ns-3 module simulating full QKD networks, including key management and ETSI GS QKD 004/014 key delivery. |
+| [ETSI GS QKD 014 Reference Implementation (cybermerqury)](https://github.com/cybermerqury/etsi-gs-qkd-014-referenceimplementation) | Control Management | Rust/PostgreSQL implementation enforcing mutual TLS, intended as a strict conformance baseline. |
+| [qkd_kme_server](https://github.com/thomasarmel/qkd_kme_server) | Control Management | ETSI GS QKD 014 KME server in Rust, serves keys over mutual TLS and connects to remote KMEs. |
+| [QUBIP etsi-qkd-004](https://github.com/QUBIP/etsi-qkd-004) | Control Management | Python server/client for the ETSI GS QKD 004 API with an emulated QKD link, from the QUBIP project. |
+| [TeraFlowSDN](https://labs.etsi.org/rep/tfs/controller) | Control Management | ETSI-hosted SDN controller with QKD topology, ETSI 015 southbound and 018 northbound interfaces. |
+| [TU/e ETSI-QKD014 client](https://github.com/TUe-QTS/ETSI-QKD014-client) | Control Management | CLI and library in Rust/C for requesting keys from ETSI 014 KMEs, used as a common test client. |
+| [qkd-etsi-api-c-wrapper](https://github.com/qursa-uc3m/qkd-etsi-api-c-wrapper) | Hybrid | C library giving applications one interface to ETSI 004/014, with simulated and real-hardware backends. |
 <!-- TOOLS-TABLE:END -->
 
 This table is generated automatically from the YAML entries below by

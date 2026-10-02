@@ -1,3 +1,4 @@
 name: "ETSI GS QKD 014 Reference Implementation (cybermerqury)"
 link: "https://github.com/cybermerqury/etsi-gs-qkd-014-referenceimplementation"
 category: "control-management"
+description: "Rust/PostgreSQL implementation enforcing mutual TLS, intended as a strict conformance baseline."

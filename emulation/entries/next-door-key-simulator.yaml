@@ -1,3 +1,4 @@
 name: "Next Door Key Simulator"
 link: "https://github.com/CreepPork/next-door-key-simulator"
 category: "emulation"
+description: "Lightweight ETSI 014 KME simulator with two KMEs over mutual TLS, for quick client testing."

@@ -1,3 +1,4 @@
 name: "qkd_kme_server"
 link: "https://github.com/thomasarmel/qkd_kme_server"
 category: "control-management"
+description: "ETSI GS QKD 014 KME server in Rust, serves keys over mutual TLS and connects to remote KMEs."

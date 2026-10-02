@@ -1,3 +1,4 @@
 name: "TeraFlowSDN"
 link: "https://labs.etsi.org/rep/tfs/controller"
 category: "control-management"
+description: "ETSI-hosted SDN controller with QKD topology, ETSI 015 southbound and 018 northbound interfaces."

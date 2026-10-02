@@ -1,3 +1,4 @@
 name: "QUBIP etsi-qkd-004"
 link: "https://github.com/QUBIP/etsi-qkd-004"
 category: "control-management"
+description: "Python server/client for the ETSI GS QKD 004 API with an emulated QKD link, from the QUBIP project."

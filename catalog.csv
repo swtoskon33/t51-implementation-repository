@@ -1,9 +1,9 @@
 name,link,category,description
-Next Door Key Simulator,https://github.com/CreepPork/next-door-key-simulator,emulation,
-QKDNetSim,https://github.com/QKDNetSim/qkdnetsim,emulation,
-ETSI GS QKD 014 Reference Implementation (cybermerqury),https://github.com/cybermerqury/etsi-gs-qkd-014-referenceimplementation,control-management,
-qkd_kme_server,https://github.com/thomasarmel/qkd_kme_server,control-management,
-QUBIP etsi-qkd-004,https://github.com/QUBIP/etsi-qkd-004,control-management,
-TeraFlowSDN,https://labs.etsi.org/rep/tfs/controller,control-management,
-TU/e ETSI-QKD014 client,https://github.com/TUe-QTS/ETSI-QKD014-client,control-management,
-qkd-etsi-api-c-wrapper,https://github.com/qursa-uc3m/qkd-etsi-api-c-wrapper,hybrid,
+Next Door Key Simulator,https://github.com/CreepPork/next-door-key-simulator,emulation,"Lightweight ETSI 014 KME simulator with two KMEs over mutual TLS, for quick client testing."
+QKDNetSim,https://github.com/QKDNetSim/qkdnetsim,emulation,"ns-3 module simulating full QKD networks, including key management and ETSI GS QKD 004/014 key delivery."
+ETSI GS QKD 014 Reference Implementation (cybermerqury),https://github.com/cybermerqury/etsi-gs-qkd-014-referenceimplementation,control-management,"Rust/PostgreSQL implementation enforcing mutual TLS, intended as a strict conformance baseline."
+qkd_kme_server,https://github.com/thomasarmel/qkd_kme_server,control-management,"ETSI GS QKD 014 KME server in Rust, serves keys over mutual TLS and connects to remote KMEs."
+QUBIP etsi-qkd-004,https://github.com/QUBIP/etsi-qkd-004,control-management,"Python server/client for the ETSI GS QKD 004 API with an emulated QKD link, from the QUBIP project."
+TeraFlowSDN,https://labs.etsi.org/rep/tfs/controller,control-management,"ETSI-hosted SDN controller with QKD topology, ETSI 015 southbound and 018 northbound interfaces."
+TU/e ETSI-QKD014 client,https://github.com/TUe-QTS/ETSI-QKD014-client,control-management,"CLI and library in Rust/C for requesting keys from ETSI 014 KMEs, used as a common test client."
+qkd-etsi-api-c-wrapper,https://github.com/qursa-uc3m/qkd-etsi-api-c-wrapper,hybrid,"C library giving applications one interface to ETSI 004/014, with simulated and real-hardware backends."
