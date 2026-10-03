@@ -46,11 +46,8 @@ pinned_commit: "0ddf603841036faaa1ccbd32c12e2464afa64430"
 ```
 
 These fields are the only metadata tracked in the entries. Licence, ETSI spec
-coverage, maturity, scoring and test results live in the accompanying
-landscape-review Excel and are not duplicated here.
-
-> Link to the landscape-review Excel: _add the internal/shared link here
-> before dissemination._
+coverage, maturity and scoring are maintained in the project's landscape
+review and are not duplicated here.
 
 ## How the repository is organised
 
@@ -74,6 +71,12 @@ the YAML files with `python3 scripts/build_catalog.py`.
 
 Third-party source code is not copied into this repository. Each tool is
 referenced by its upstream repository and the pinned commit that was reviewed.
+
+## Maintenance
+
+The catalogue is reviewed every three months until the end of the project
+(M36). Each review checks repository activity, licences and pinned commits,
+and adds newly identified tools.
 
 ## Adding an entry
 
