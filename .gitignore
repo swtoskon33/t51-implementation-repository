@@ -1,0 +1,25 @@
+# macOS and editors
+.DS_Store
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Backups and logs
+*.bak
+*.log
+
+# Local test output
+t51-work/
+reports/
+
+# Certificates and keys
+*.pem
+*.key
+*.crt
+*.pfx
+*.p12
+.env
