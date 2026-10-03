@@ -20,3 +20,7 @@ source my_deploy.sh
 - Licence to be confirmed from the ETSI repository.
 
 Deployment guide: https://tfs.etsi.org/documentation/develop/deployment_guide/
+
+## Validation
+
+Not yet tested. Instructions are taken from the upstream documentation.

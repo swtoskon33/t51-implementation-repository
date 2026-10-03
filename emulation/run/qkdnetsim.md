@@ -18,3 +18,7 @@ git apply contrib/qkdnetsim/patches/gnuplot_cc.patches
 - Only ns-3.48 is supported.
 - Tested by the authors on Ubuntu 22.04 only.
 - Apply the patches on a clean ns-3 clone.
+
+## Validation
+
+Not yet tested. Instructions are taken from the upstream documentation.

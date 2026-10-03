@@ -17,3 +17,7 @@ make
 
 - The back-end is selected at compile time.
 - The full ETSI 014 test runs only with hardware back-ends.
+
+## Validation
+
+Not yet tested. Instructions are taken from the upstream documentation.

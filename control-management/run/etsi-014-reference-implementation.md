@@ -20,3 +20,7 @@ make get_dec_key KEY='<KEY_ID>'
 - Instructions target Ubuntu: use a VM on other platforms.
 - Docker must be running before `make setup`.
 - AGPL-3.0: modified versions offered as a network service must publish their source.
+
+## Validation
+
+Not yet tested. Instructions are taken from the upstream documentation.

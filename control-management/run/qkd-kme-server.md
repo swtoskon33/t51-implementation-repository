@@ -17,6 +17,12 @@ curl -k --cert certs/kme-2-local-zone/client_3.crt --key certs/kme-2-local-zone/
 
 ## Known issues
 
-- macOS does not support `.pfx`: point the configs to the bundled `.pem` files with an empty password.
+- If the `.pfx` client certificates cannot be loaded, point the configurations to the bundled `.pem` files with an empty password.
 - "Gateway timeout" between KMEs with the bundled self-signed certificates: use `QKD_KME_SERVER_DANGER_INTER_KME_IGNORE_CERT=Y` for local tests only.
 - Stale processes keep ports bound: run `pkill qkd_kme_server` before restarting.
+
+## Validation
+
+Tested on 29/09/2026 with two KMEs on one host. SAE 1 requested a key from KME 1 and SAE 3 retrieved it from KME 2. Result: pass, identical key and key_ID on both sides over mutual TLS.
+
+Commit: `0ddf603841036faaa1ccbd32c12e2464afa64430`

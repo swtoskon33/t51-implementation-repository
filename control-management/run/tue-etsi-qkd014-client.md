@@ -15,3 +15,7 @@ etsi014-cli --host <kme> --port <port> --key <client.key> --cert <client.crt> --
 
 - SAE identifiers differ between KMEs (numeric, UUID, names).
 - Provide the KME CA file explicitly with self-signed test certificates.
+
+## Validation
+
+Not yet tested. Instructions are taken from the upstream documentation.

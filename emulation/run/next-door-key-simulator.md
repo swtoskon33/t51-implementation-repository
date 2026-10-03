@@ -15,3 +15,10 @@ curl -k --cert certs/sae-2.crt.pem --key certs/sae-2.key.pem -X POST -H "Content
 - Only POST is supported on enc_keys and dec_keys.
 - Keys are generated every 30 s.
 - SAE identifiers are fixed in `.env`.
+- On a first build, both services may build the same image in parallel and fail. Build the image once with `docker build -t creeppork/next-door-key-simulator:latest .` and then run `docker compose up -d`.
+
+## Validation
+
+Tested on 03/10/2026 with Docker Compose. SAE 1 requested a key from KME 1 and SAE 2 retrieved it from KME 2. Result: pass, identical key and key_ID on both sides over mutual TLS.
+
+Commit: `800efac955750c44e0a161d9c6db506ce93da994`
