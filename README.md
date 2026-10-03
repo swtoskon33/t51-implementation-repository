@@ -2,8 +2,9 @@
 
 Public index of open-source reference implementations relevant to EuroQCI
 standardisation (ETSI GS QKD interfaces), reviewed under Task 5.1. This
-repository is the **MS5.1** deliverable: it points to the selected
-implementations and keeps them organised by category.
+repository is the **MS5.1** deliverable: it points to the candidate
+reference implementations (to be agreed with ETSI and the TID) and keeps them
+organised by category.
 
 ## All tools
 
@@ -26,12 +27,13 @@ This table is generated automatically from the YAML entries below by
 ## Entry format
 
 Each implementation is one YAML file under a category's `entries/` folder.
-Every entry has exactly four fields:
+Every entry has the following fields:
 
-- `name` — the tool's official name, as its authors write it
-- `link` — canonical URL: project homepage or source repository
-- `category` — one of `emulation`, `control-management`, `hybrid`; must match the folder the file is in
-- `description` — one short sentence on what the tool is and does
+- `name`: the tool's official name, as its authors write it
+- `link`: canonical URL, project homepage or source repository
+- `category`: one of `emulation`, `control-management`, `hybrid`, matching the folder the file is in
+- `description`: one short sentence on what the tool is and does
+- `pinned_commit`: the upstream commit reviewed or tested, for reproducibility
 
 Example:
 
@@ -40,9 +42,10 @@ name: "qkd_kme_server"
 link: "https://github.com/thomasarmel/qkd_kme_server"
 category: "control-management"
 description: "ETSI GS QKD 014 KME server in Rust, serves keys over mutual TLS and connects to remote KMEs."
+pinned_commit: "0ddf603841036faaa1ccbd32c12e2464afa64430"
 ```
 
-These four fields are the only metadata tracked here. Licence, ETSI spec
+These fields are the only metadata tracked in the entries. Licence, ETSI spec
 coverage, maturity, scoring and test results live in the accompanying
 landscape-review Excel and are not duplicated here.
 
@@ -59,12 +62,19 @@ landscape-review Excel and are not duplicated here.
 
 Each folder contains:
 
-- `README.md` — short description of the category
-- `index.md` — the human-readable table for that category (generated)
-- `entries/*.yaml` — one file per implementation, in the format above
+- `README.md`: short description of the category
+- `index.md`: the human-readable table for that category (generated)
+- `entries/*.yaml`: one file per implementation, in the format above
+- `run/*.md`: requirements, installation steps and known issues for each implementation
 
 The repository-wide index is [`catalog.csv`](./catalog.csv), regenerated from
 the YAML files with `python3 scripts/build_catalog.py`.
+
+## Test results
+
+Dated test reports and the ETSI GS QKD 014 interoperability matrix are kept in
+[`/results`](./results). Third-party source code is not copied into this
+repository. Each tool is referenced by its upstream repository and pinned commit.
 
 ## Adding an entry
 

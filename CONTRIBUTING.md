@@ -10,10 +10,13 @@ landscape-review Excel, not here.
    (`emulation/entries/`, `control-management/entries/` or
    `hybrid/entries/`).
 2. Rename it to a short slug of the tool name, e.g. `my-tool.yaml`.
-3. Fill in `name`, `link` and `category` (must match the folder).
-4. Run `python scripts/build_catalog.py` to regenerate `index.md` and
+3. Fill in `name`, `link`, `category` (must match the folder), `description`
+   and `pinned_commit`.
+4. Optionally add `run/<slug>.md` with requirements, installation steps and
+   known issues, and dated test reports under `results/<slug>/`.
+5. Run `python scripts/build_catalog.py` to regenerate `index.md` and
    `catalog.csv`, and include the regenerated files in your commit.
-5. Open a pull request. New entries are merged after a WP5 reviewer
+6. Open a pull request. New entries are merged after a WP5 reviewer
    confirms the tool has already been logged in the landscape-review
    Excel (licence check, ETSI coverage, scoring).
 

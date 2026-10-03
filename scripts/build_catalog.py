@@ -12,7 +12,7 @@ except ImportError:
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 CATEGORIES = ["emulation", "control-management", "hybrid"]
 REQUIRED_FIELDS = ["name", "link", "category"]
-ALL_FIELDS = REQUIRED_FIELDS + ["description"]
+ALL_FIELDS = REQUIRED_FIELDS + ["description", "pinned_commit"]
 
 rows = []
 for category in CATEGORIES:
@@ -26,20 +26,23 @@ for category in CATEGORIES:
         if data["category"] != category:
             sys.exit(f"{yaml_file}: category mismatch with folder {category}")
         data.setdefault("description", "")
+        data.setdefault("pinned_commit", "")
+        data["run"] = f"run/{yaml_file.stem}.md" if (ROOT / category / "run" / f"{yaml_file.stem}.md").exists() else ""
         entries.append(data)
         rows.append(data)
 
     index_path = ROOT / category / "index.md"
     lines = [f"# {category.replace('-', ' ').title()}", "",
-             "| Tool | Description |", "| --- | --- |"]
+             "| Tool | Description | Run instructions |", "| --- | --- | --- |"]
     for e in entries:
-        lines.append(f"| [{e['name']}]({e['link']}) | {e['description']} |")
+        run = f"[run.md]({e['run']})" if e["run"] else ""
+        lines.append(f"| [{e['name']}]({e['link']}) | {e['description']} | {run} |")
     index_path.write_text("\n".join(lines) + "\n")
     print(f"Wrote {index_path} ({len(entries)} entries)")
 
 catalog_path = ROOT / "catalog.csv"
 with catalog_path.open("w", newline="") as f:
-    writer = csv.DictWriter(f, fieldnames=ALL_FIELDS)
+    writer = csv.DictWriter(f, fieldnames=ALL_FIELDS, extrasaction="ignore")
     writer.writeheader()
     writer.writerows(rows)
 print(f"Wrote {catalog_path} ({len(rows)} entries total)")

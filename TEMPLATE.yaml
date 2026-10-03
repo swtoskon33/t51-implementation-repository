@@ -1,7 +1,9 @@
-# One implementation per file. Only these three fields are tracked here.
+# One implementation per file. Only these fields are tracked here.
 # Everything else (licence, ETSI coverage, maturity, scoring, test notes)
 # stays in the landscape-review Excel.
 
 name: ""        # Official name of the tool, as its authors write it
 link: ""        # Canonical URL: project homepage or source repository
 category: ""    # One of: emulation | control-management | hybrid
+description: ""     # One short sentence on what the tool is and does
+pinned_commit: ""   # Upstream commit reviewed or tested (git ls-remote <link> HEAD)
