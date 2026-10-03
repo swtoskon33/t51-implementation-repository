@@ -70,11 +70,10 @@ Each folder contains:
 The repository-wide index is [`catalog.csv`](./catalog.csv), regenerated from
 the YAML files with `python3 scripts/build_catalog.py`.
 
-## Test results
+## Reproducibility
 
-Dated test reports and the ETSI GS QKD 014 interoperability matrix are kept in
-[`/results`](./results). Third-party source code is not copied into this
-repository. Each tool is referenced by its upstream repository and pinned commit.
+Third-party source code is not copied into this repository. Each tool is
+referenced by its upstream repository and the pinned commit that was reviewed.
 
 ## Adding an entry
 
