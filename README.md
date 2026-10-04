@@ -77,7 +77,10 @@ referenced by its upstream repository and the pinned commit that was reviewed.
 
 The catalogue is reviewed every three months until the end of the project
 (M36). Each review checks repository activity, licences and pinned commits,
-and adds newly identified tools.
+and adds newly identified tools. The search covers GitHub, gitlab.com, PyPI,
+crates.io and Zenodo, and also the institutional GitLab instances of European
+research and education organisations (for example SURF, RWTH Aachen, TU Delft,
+KIT, CNRS and Fraunhofer), where QKD-related code is often hosted.
 
 ## Adding an entry
 
