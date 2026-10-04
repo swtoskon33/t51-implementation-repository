@@ -17,10 +17,12 @@ make get_dec_key KEY='<KEY_ID>'
 ## Known issues
 
 - Rust toolchain pinned to 1.80.1.
-- Instructions target Ubuntu: use a VM on other platforms.
+- Instructions target Ubuntu, but the tool also builds on other platforms with Rust and Docker.
 - Docker must be running before `make setup`.
 - AGPL-3.0: modified versions offered as a network service must publish their source.
+- The root CA generation in `certs/Makefile` prompts for a passphrase and waits silently. Add `-nodes` to the `openssl req -x509` command for unattended runs.
+- The example scripts use `curl --tlsv1.3`, which some curl builds do not support. Removing the option lets TLS negotiate the version.
 
 ## Validation
 
-Not yet tested. Instructions are taken from the upstream documentation.
+Tested on 04/10/2026 with one KME and PostgreSQL in Docker. SAE 001 requested a key for SAE 002 with `enc_keys` and SAE 002 retrieved it with `dec_keys`. Result: pass, identical key and key_ID. A request without a client certificate was rejected at TLS level, confirming that mutual TLS is enforced.
