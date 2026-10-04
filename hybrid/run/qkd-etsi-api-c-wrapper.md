@@ -17,7 +17,8 @@ make
 
 - The back-end is selected at compile time.
 - The full ETSI 014 test runs only with hardware back-ends.
+- With ETSI 014 and the simulated back-end, the build requires the libuuid library, which is not listed in the dependencies. Install it (for example `uuid-dev` or `util-linux`) and pass its path with `-DUUID_LIB` if it is not found automatically.
 
 ## Validation
 
-Not yet tested. Instructions are taken from the upstream documentation.
+Tested on 04/10/2026 with the simulated back-end. The library built with ETSI 004 and ETSI 014 enabled, and both test programs (`etsi004_test` and `etsi014_test`) passed. Hardware mode with IDQ Cerberis XGR devices remains to be tested in a testbed.
