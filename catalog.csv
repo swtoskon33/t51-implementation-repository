@@ -1,6 +1,7 @@
 name,link,category,description,pinned_commit
 Next Door Key Simulator,https://github.com/CreepPork/next-door-key-simulator,emulation,"Lightweight ETSI 014 KME simulator with two KMEs over mutual TLS, for quick client testing.",800efac955750c44e0a161d9c6db506ce93da994
 QKDNetSim,https://github.com/QKDNetSim/qkdnetsim,emulation,"ns-3 module simulating full QKD networks, including key management and ETSI GS QKD 004/014 key delivery.",e6330fe6400d7d061c67d84c9ba923396c6db64f
+eduKMS,https://gitlab.com/surfquantum/eduqkd/edukms,control-management,Key Management Service by SURF with ETSI GS QKD 014 key delivery and ETSI GS QKD 020 KME-to-KME interworking.,f753c38
 ETSI GS QKD 014 Reference Implementation (cybermerqury),https://github.com/cybermerqury/etsi-gs-qkd-014-referenceimplementation,control-management,"Rust/PostgreSQL implementation enforcing mutual TLS, intended as a strict conformance baseline.",56474322b9180f5f7fb59770442112d4e8b06e43
 qkd_kme_server,https://github.com/thomasarmel/qkd_kme_server,control-management,"ETSI GS QKD 014 KME server in Rust, serves keys over mutual TLS and connects to remote KMEs.",0ddf603841036faaa1ccbd32c12e2464afa64430
 QUBIP etsi-qkd-004,https://github.com/QUBIP/etsi-qkd-004,control-management,"Python server/client for the ETSI GS QKD 004 API with an emulated QKD link, from the QUBIP project.",53dfffbf9c03aca1fd8c395d84fbb40681404ef6
