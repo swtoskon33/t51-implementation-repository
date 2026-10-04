@@ -20,6 +20,7 @@ curl -k --cert certs/kme-2-local-zone/client_3.crt --key certs/kme-2-local-zone/
 - If the `.pfx` client certificates cannot be loaded, point the configurations to the bundled `.pem` files with an empty password.
 - "Gateway timeout" between KMEs with the bundled self-signed certificates: use `QKD_KME_SERVER_DANGER_INTER_KME_IGNORE_CERT=Y` for local tests only.
 - Stale processes keep ports bound: run `pkill qkd_kme_server` before restarting.
+- The bundled test certificates lack the `serverAuth` extended key usage and sign P-384 keys with SHA-256, which strict TLS clients reject. Reissuing the server certificates with the same CA, `serverAuth` and SHA-384 resolves this.
 
 ## Validation
 
