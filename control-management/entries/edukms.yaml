@@ -1,0 +1,5 @@
+name: "eduKMS"
+link: "https://gitlab.com/surfquantum/eduqkd/edukms"
+category: "control-management"
+description: "Key Management Service by SURF with ETSI GS QKD 014 key delivery and ETSI GS QKD 020 KME-to-KME interworking."
+pinned_commit: "f753c38"

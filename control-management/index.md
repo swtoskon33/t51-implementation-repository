@@ -2,6 +2,7 @@
 
 | Tool | Description | Run instructions |
 | --- | --- | --- |
+| [eduKMS](https://gitlab.com/surfquantum/eduqkd/edukms) | Key Management Service by SURF with ETSI GS QKD 014 key delivery and ETSI GS QKD 020 KME-to-KME interworking. | [run.md](run/edukms.md) |
 | [ETSI GS QKD 014 Reference Implementation (cybermerqury)](https://github.com/cybermerqury/etsi-gs-qkd-014-referenceimplementation) | Rust/PostgreSQL implementation enforcing mutual TLS, intended as a strict conformance baseline. | [run.md](run/etsi-014-reference-implementation.md) |
 | [qkd_kme_server](https://github.com/thomasarmel/qkd_kme_server) | ETSI GS QKD 014 KME server in Rust, serves keys over mutual TLS and connects to remote KMEs. | [run.md](run/qkd-kme-server.md) |
 | [QUBIP etsi-qkd-004](https://github.com/QUBIP/etsi-qkd-004) | Python server/client for the ETSI GS QKD 004 API with an emulated QKD link, from the QUBIP project. | [run.md](run/qubip-etsi-qkd-004.md) |
